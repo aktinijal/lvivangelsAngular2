@@ -14,15 +14,15 @@ import { ContactsComponent } from './components/pages/contacts/contacts.componen
 // LAYUOTS conmonents
 import { HeaderComponent } from './components/layouts/header/header.component';
 import { FooterComponent } from './components/layouts/footer/footer.component';
-//MODULES conmonents
+// MODULES conmonents
 import { EventsListComponent } from './components/modules/events-list/events-list.component';
 import { PhotosComponent } from './components/modules/photos/photos.component';
-// // Services
-// import { DatabaseService } from './services/database/database.service';
-// import { ShareService } from './services/share/share.service';
+// Services
+import { DatabaseService } from './services/database/database.service';
+import { ShareService } from './services/share/share.service';
 // Routes
-import configRoutes from './routes';
-var routes = configRoutes();
+// import configRoutes from './routes';
+// let routes = configRoutes();
 
 @NgModule({
   declarations: [
@@ -41,11 +41,36 @@ var routes = configRoutes();
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot([
+        {
+        path: '',
+        component: MainComponent
+        },
+        {
+        path: 'events',
+        component: EventsComponent
+        },
+        {
+        path: 'gallery',
+        component: GalleryComponent 
+        },
+        {
+        path: 'federation',
+        component: FederationComponent
+        },
+        {
+        path: 'contacts',
+        component: ContactsComponent
+        },
+        {
+        path: '**', 
+        redirectTo: '/',
+        }
+    ]),
   ],
   providers: [
-    //  DatabaseService,
-    //  ShareService
+     DatabaseService,
+     ShareService
      ],
   bootstrap: [AppComponent]
 })
