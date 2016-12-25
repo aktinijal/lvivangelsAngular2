@@ -1,0 +1,77 @@
+#federation-content {
+    margin: 0 10px;
+}
+
+#info {
+    margin-bottom: 50px;
+}
+
+.info-item {
+    height: auto;
+    padding: 0;
+    font-size: 32px;
+    text-align: center;
+}
+
+.info-open {
+    color: #888888;
+    font-size: 14px;
+    font-family: 'Open Sans', arial;
+    background: #fff;
+    text-align: justify;
+}
+
+.info-open p {
+    font-size: 14px;
+}
+
+.activeInfo,
+.active {
+    color: #333333;
+}
+
+.info-item:hover {
+    color: #333333;
+}
+
+.history img {
+    width: 100%;
+    height: auto;
+}
+
+.leadership-item {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.leadership-item p {
+    padding-right: 15px;
+    text-align: justify;
+}
+
+.title2 {
+    margin: 5px auto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.leadership-img {
+    text-align: center;
+}
+.leadership-img img {
+    width: 170px;
+}
+
+.success-item {
+    margin-bottom: 15px;
+}
+
+.success-content p {
+    padding-right: 15px;
+    text-align: justify;
+}
+
+.success-img img {
+    width: 100%;
+    height: auto;
+}
