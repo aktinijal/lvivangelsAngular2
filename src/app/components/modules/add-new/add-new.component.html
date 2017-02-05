@@ -1,0 +1,36 @@
+<div class="col-md-12" class="add-new">
+  <button type="button" (click)="openAddNew()" class="add-button">+</button>
+</div>
+<div *ngIf="openedAddNew" class="form-container row">
+  <div class="form col-md-12 col-sm-12">
+    <form class="row" #f="ngForm" [formGroup]="form" (ngSubmit)="onSubmit(f, $event)">
+      <div class="col-md-3">
+        <label for="date">Дата</label>
+        <input formControlName="date" type="text" name="date" class="form-control" id="inputDate" placeholder="Дата події" />
+        <label for="year">Рік</label>
+        <input formControlName="year" type="text" name="year" class="form-control" id="inputYear" placeholder="Рік" />
+      </div>
+      <div class="col-md-9">
+        <label for="topic">Тема події</label>
+        <input formControlName="topic" type="text" name="topic" class="form-control" id="inputЕopic" placeholder="Тема події" />
+        <label for="location">Місце події</label>
+        <input formControlName="location" type="text" name="location" class="form-control" id="inputLocation" placeholder="Місце події"
+        />
+      </div>
+      <div class="col-md-6 photo">
+        <label for="photo">Фото до події</label>
+        <input type="file" (change)="setFile($event.target.files[0])" name="photo" class="form-control" id="inputPhoto" />
+        <div class="photoholder">
+          <img *ngIf="viewPhoto" src="{{photoUrl}}" />
+          <p *ngIf="!viewPhoto">+</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="description">Опис події</label>
+        <textarea formControlName="description" type="text" name="description" class="form-control" id="inputDescription" placeholder="Опис події"
+          cols="30" rows="7"></textarea>
+          <button type="submit" class="transition">Відправити</button>
+      </div>
+    </form>
+  </div>
+</div>

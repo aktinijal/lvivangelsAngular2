@@ -1,3 +1,22 @@
-<p>
-  events-list works!
-</p>
+<div class="news-item col-md-12" *ngFor="let new of news" (click)="openNew(new)">
+  <div class="news-head clearfix">
+    <span class="date">{{new.date}} <br>{{new.year}}</span>
+    <div class="new">
+      <h2>{{new.title}}</h2><br>
+      <span class="location">{{new.location}}</span>
+    </div>
+    <img class="first-img" src="img/bottom.png" alt="">
+  </div>
+  <div class="news-open clearfix" [ngClass]="{'new-open': new.open }">
+    <div class="row">
+      <div class="news-img col-md-6 col-sm-6">
+        <img src={{new.src}} alt="">
+      </div>
+      <div class="news-content col-md-6 col-sm-6">
+        <p *ngFor="let desc of new.description">
+          {{desc}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

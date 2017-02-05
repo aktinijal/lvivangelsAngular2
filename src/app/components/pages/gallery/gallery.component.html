@@ -1,25 +1,23 @@
 <div class="gallery gallery-top" class="clearfix">
-        <h1 class="gallery-title">Змагання</h1>
-        <div class="photos photos-gallery-1 popup-gallery row">
-        
-        </div> 
-    </div>
-    
-    <div class="gallery" class="clearfix">
-        <h1 class="gallery-title">Спортивні збори</h1>
-        <div class="photos photos-gallery-2 popup-gallery row">
-        
-        </div> 
-    </div>
-    <div class="gallery" class="clearfix">
-        <h1 class="gallery-title">Тренування</h1>
-        <div class="photos photos-gallery-3 popup-gallery row">
-        
-        </div> 
-    </div>
-    <div class="gallery" class="clearfix">
-        <h1 class="gallery-title">Культурні заходи</h1>
-        <div class="photos photos-gallery-4 popup-gallery row">
-        
-        </div> 
-    </div>
+  <h1 class="gallery-title">Змагання</h1>
+  <div class="photos photos-gallery-1 popup-gallery row">
+  </div>
+</div>
+<div class="gallery" class="clearfix">
+  <h1 class="gallery-title">Спортивні збори</h1>
+  <div class="photos photos-gallery-2 popup-gallery row">
+  </div>
+</div>
+<div class="gallery" class="clearfix">
+  <h1 class="gallery-title">Тренування</h1>
+  <div class="photos photos-gallery-3 popup-gallery row">
+  </div>
+</div>
+<div class="gallery" class="clearfix">
+  <h1 class="gallery-title">Культурні заходи</h1>
+  <div class="photos photos-gallery-4 popup-gallery row">
+  </div>
+</div>
+<div fileDrop [ngClass]="{'file-is-over': fileIsOver}" [options]="options" (fileOver)="fileOver($event)" (onFileDrop)="onFileDrop($event)">
+  Drop file here
+</div>
